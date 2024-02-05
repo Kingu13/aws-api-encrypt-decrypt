@@ -3,7 +3,7 @@ name: Build and push to aws
 on:
   push:
     branches:
-      - 'nextStep'
+      - '*'
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
 
       - name: Build project
         run: |
-          cd Encrypt-Decrypt
+          cd /Encrypt-Decrypt
           dotnet restore; 
           dotnet publish -o site;
 
