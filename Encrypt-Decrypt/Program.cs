@@ -57,7 +57,7 @@ namespace Caesar;
                 endpoints.MapControllers();
                 endpoints.MapGet("/", async context =>
                 {
-                    await context.Response.SendFileAsync("../wwwroot/index.html");
+                    await context.Response.SendFileAsync("../wwwroot/Index.html");
                 });
                 endpoints.MapGet("/Caesar", async context =>
                 {
