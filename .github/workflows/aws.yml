@@ -25,7 +25,7 @@ jobs:
           dotnet publish -o site
 
       - name: create zip package
-        run: cd Encrypt-Decrypt; zip ../../site.zip *
+        run: cd Encrypt-Decrypt; zip ../site.zip *
 
       - name: Deploy to aws EB
         uses: einaregilsson/beanstalk-deploy@v21
