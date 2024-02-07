@@ -22,11 +22,10 @@ jobs:
         run: |
           cd Encrypt-Decrypt
           dotnet restore
-          dotnet build
           dotnet publish -o site
 
       - name: create zip package
-        run: cd site; zip ../../site.zip *
+        run: pwd; cd Encrypt-Decrypt/site; zip ../../site.zip *
 
       - name: Deploy to aws EB
         uses: einaregilsson/beanstalk-deploy@v21
