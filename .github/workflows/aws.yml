@@ -3,7 +3,7 @@ name: Build and push to aws
 on:
   push:
     branches:
-      - 'nextStep'
+      - '*'
 
 jobs:
   build:
@@ -25,7 +25,7 @@ jobs:
           dotnet publish -o site;
 
       - name: create zip package
-        run: cd site; zip ../site.zip *;
+        run: cd Encrypt-Decrypt; zip ../../site.zip *;
 
       - name: Deploy to aws EB
         uses: einaregilsson/beanstalk-deploy@v21
